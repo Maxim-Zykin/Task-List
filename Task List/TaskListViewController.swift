@@ -67,7 +67,7 @@ class TaskListViewController: UITableViewController {
     private func fetchData() {
         let fetchRequest: NSFetchRequest<Task> = Task.fetchRequest()
         
-        do{
+        do {
            tasks = try context.fetch(fetchRequest)
             DispatchQueue.main.async {
                 self.tableView.reloadData()
